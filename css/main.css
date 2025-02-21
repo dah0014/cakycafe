@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+/* --------------------font-------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* --------------------reset-------------------- */
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color:inherit;}
+body {overflow-x: hidden; font-family: "Noto Sans KR", sans-serif; color: #181818;}
+
+
+/* --------------------common-------------------- */
+.inner {
+  width: 1200px; margin: 0 auto; overflow: hidden; 
+}
+.main-inner {
+  position: relative;
+  width: 1600px; margin: 0 auto; overflow: hidden; outline: 1px dotted red;
+}
+
+/* 소제목 */
+h2 { 
+  position: absolute; transform: rotate(-90deg); top: 0; left: 0;
+  font-size: 50px; opacity: 0.7; color:#332; padding: 20px;
+  font-family: "Kanit", sans-serif;
+  outline: 1px dotted red;
+}
+
+
+/* --------------------header-------------------- */
+
+header {
+  position: relative; top: 0px;
+  width: 100%; height: 1000px; 
+  background: url('../img/header1.jpg') no-repeat center/cover;
+  margin-bottom: -60px;
+  font-family: "Kanit", sans-serif;
+}
+header::before {
+  position: absolute; 
+  width: 100%; height: 1000px; 
+  content: "";
+  background: #390ca3;
+  opacity: 0.6;
+}
+
+header h1 {
+  position: relative; z-index: 3;
+  top: 28%; right: 0;
+  font-size: 10rem; 
+  font-weight: 400;
+  text-align: center;
+  color: #fff; opacity: 0.7;
+  letter-spacing: 30px; 
+  font-family: "Kanit", sans-serif; 
+}
+header .header-name {
+  position: relative; top: 19%; left: 50%; transform: translate(-50%, 0); z-index: 4;
+  font-size: 7rem; 
+  text-align: center;
+  color: #000; opacity: 0.8;
+  font-weight: 300; 
+  letter-spacing: 40px;
+}
+header .header-port {
+  position: relative; top: 22%; left: 0; 
+  text-align: center;
+  font-family: 'NanumSquareLight', sans-serif;
+  font-weight: 200; font-size:20px; letter-spacing: 40px;
+  color: #fff; opacity: 0.8;
+}
+header .header-sentence{
+  position: relative; text-align: center; top: 35%;
+  width: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 30px; color: #fff; 
+  letter-spacing: 25px; font-weight: lighter;
+}
+
+/* -------------fade in, fade out--------------- */
+body {animation : fadein 2000ms ease-out;}
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* --------------------nav-------------------- */
+
+nav {
+  width: 100%; height: 60px; 
+  position: fixed; top: 0; z-index: 9999;
+  opacity: 0.8; background: #fff;
+}
+nav ul {
+  width: 800px; height: 60px; 
+  display:flex; justify-content: right; 
+  outline: 1px dotted red;
+}
+nav .on {opacity: 1;}
+nav ul li a {
+  display: block;
+  width: 100px; height: 60px; 
+  line-height: 60px; text-align: center;
+  font-size: 16px; color: #332; 
+  font-family: "Kanit", sans-serif;
+}
+nav ul li:hover a {
+  background: #b8b8ff; 
+}
+
+/* ------------------top button------------------- */
+.fix-top {
+  position: fixed; z-index: 10; bottom: 0; right: 0; margin:30px;
+}
+.btn-top {
+  display: block; 
+  background: #000; opacity: 0.7;
+  padding: 15px; border-radius:50%; border: 0;
+  color: #fff; text-align: center; line-height: 10px;
+  font-family: "Kanit", sans-serif;
+  cursor: pointer;
+}
+/* --------------------main(about me)-------------------- */
+main {
+  width: 100%; 
+}
+main>div {display: flex;}
+main .aboutMe {
+  display: flex; justify-content: space-around;
+  box-sizing: border-box;
+  outline: 1px dotted red;
+}
+
+/* intro1 */
+main .intro1 {
+  position: relative; z-index: 2;
+  height: 600px; padding: 50px; box-sizing: border-box;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 5px 5px 10px rgb(148, 146, 146);
+  margin-right: 50px;
+  background:#f8f7fe;
+}
+main .intro1 img {
+  width: 200px; height: 266px;
+  object-fit: cover;
+  border-radius: 80px;
+}
+main .intro1 p.name {
+  text-align: center; font-size: 25px; font-weight:900; padding: 20px 0;
+  font-family: 'NanumSquareAceb', sans-serif;
+}
+main .intro1 p.name span {
+  font-size: 20px; font-weight: 200;
+  font-family: "Kanit", ssans-serif; 
+  letter-spacing: 5px;
+}
+main .intro1 p.name-after {
+  font-family: 'NanumSquareLight', sans-serif; font-weight: 500;
+}
+main .intro1 p i {margin-right: 10px; color: #3b3b3b;}
+
+/* intro2 */
+main .intro2 {display: flex; flex-direction: column;}
+main .intro2-before {
+  position: relative; z-index: 1;
+  width: 950px; height: 50px; line-height: 50px; margin: 20px -100px 50px; padding-left: 100px; box-sizing: border-box;
+  font-size: 30px;
+  font-family: 'NanumSquareLight', sans-serif;
+  background: #b8b8ff; color:#332;
+}
+main .intro2-before span {font-weight: bold; color:aliceblue;}
+main .intro2 .intro2-row {display: flex;}
+main .intro2 .intro2-1 {padding: 0 20px;}
+main .intro2 table {margin-bottom: 30px; font-size: 15px;}
+main .intro2 table tbody td:nth-child(1) {font-weight: bold; padding: 0 10px 0 0; }
+main .intro2 table tbody td:nth-child(3) {padding-left: 10px; font-size: 14px}
+main .intro2 h3 {
+  display: inline-block;
+  background-image: linear-gradient(to bottom, transparent 50%, #dcdcfc 50%);
+}
+/* main button(1) */
+.btn_click {
+  display: inline; margin-right: 40px;
+  font-size: 25px; font-weight: 600;
+  font-family: "Kanit", 'NanumSquareAceb';
+}
+main button {
+  margin-top: 30px; margin-right: 40px;
+  border: none;
+  width: 180px; height: 60px; 
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgb(59, 59, 59);
+}
+main button a {
+  display: block;
+  width: 180px; height: 60px; line-height: 60px;
+  background-image: linear-gradient(45deg, #f0ecfc 0%, #c797eb 70%);
+  border-radius: 10px;
+  font-family: "Kanit", sans-serif; 
+  font-size: 25px; font-weight: 500;
+  color: #333;
+  transition: 0.2s;
+}
+main button:hover a{
+  display: block;
+  width: 180px; height: 60px;
+  background: #c797eb;
+  color: #fff;
+}
+
+
+/* --------------------main(skills)-------------------- */
+.skills {position: relative; display: flex; justify-content: center; padding-top: 10px; margin-bottom: -80px;}
+.skills img {
+  width: 80px; height: 80px; margin: 0 20px;
+}
+.skills .skillSet {display: flex; flex-direction: column;}
+.skills .skillSet .j3 {width: 80px; height: 80px; object-fit: contain;}
+.skills .skillSet i {transform: scale(3); padding: 50px; color:#332;}
+.skills .skillSet span {font: bold 20px "Kanit"; text-align: center; text-transform: uppercase; margin: 10px 0 0;}
+.skills .skillSet .ability1 {font-size: 15px; color: #A294F9;}
+
+
+/* --------------------main(works)-------------------- */
+.works {position: relative; display: flex; flex-direction: column;}
+.works article {display: flex; font-family: 'NanumSquare', sans-serif; margin:50px 0; }
+.works article>div:nth-child(1) {flex: 2; overflow: hidden; margin: 0 10px;}
+.works article>div:nth-child(2) {padding: 20px; flex: 1; margin-left: 10px;}
+.works article>div>div {display: flex; }
+.works article img {width: 100%; transition: .6s;}
+.works article img:hover {transform: scale(1.2); }
+.works article h3 {font-size: 30px;}
+.works h4 {font-size: 20px; font-weight: 500;}
+.works article div p {font-size: 16px; line-height: 1.3em;}
+
+
+/* main button(2) */
+.works button {width: 150px; height: 50px; border-radius: 10px; box-shadow: 3px 3px 5px rgb(59, 59, 59);}
+.works button a {
+  display: block; width: 150px; height: 50px; 
+  line-height: 50px;
+  font-size: 18px; letter-spacing: 1px; font-weight: 600;
+  font-family: 'NanumSquare', sans-serif;
+  background-image: linear-gradient(45deg, #f5f7fa 0%, #dedcff 70%); color: rgb(65, 64, 64);
+}
+.works button:hover a {
+  width: 150px; height: 50px; background: #A294F9;
+}
+
+
+/* --------------------main(design)-------------------- */
+.design {position: relative;}
+
+
+
+/* --------------------footer-------------------- */
+footer {
+  display: flex; flex-direction: column; 
+  outline: 1px dotted red;
+}
+.footer {
+  position: relative;
+  width: 100%; height: 300px; 
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  background: url('../img/header3.jpg') no-repeat center/cover; 
+}
+.footer::before {
+  position: absolute; 
+  width: 100%; height: 300px; 
+  content: "";
+  background: #2A004E;
+  opacity: 0.6;
+}
+.footer p {
+  position: relative; 
+  color: #ffffffca;
+  font-family: "Kanit", sans-serif;
+  font-size: 30px; font-weight: 100;
+  letter-spacing: 30px;
+}
+.footer-after {
+  text-align: center; padding: 10px 0 20px;
+  background: #b8b8ff;
+  font-size: 12px; 
+}
